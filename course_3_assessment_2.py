@@ -14,3 +14,9 @@ print(b_countries)
 people = [('Snow', 'Jon'), ('Lannister', 'Cersei'), ('Stark', 'Arya'), ('Stark', 'Robb'), ('Lannister', 'Jamie'), ('Targaryen', 'Daenerys'), ('Stark', 'Sansa'), ('Tyrell', 'Margaery'), ('Stark', 'Eddard'), ('Lannister', 'Tyrion'), ('Baratheon', 'Joffrey'), ('Bolton', 'Ramsey'), ('Baelish', 'Peter')]
 first_names=[i[1] for i in people]
 print(first_names)
+
+# Use list comprehension to create a list called lst2 that doubles each element in the list, lst.
+
+lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
+lst2=[ value*2 for value in lst ]
+print(lst2)
