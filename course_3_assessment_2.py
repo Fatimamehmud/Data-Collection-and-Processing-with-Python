@@ -21,6 +21,12 @@ lst = [["hi", "bye"], "hello", "goodbye", [9, 2], 4]
 lst2=[ value*2 for value in lst ]
 print(lst2)
 
+# Below, we have provided a list of tuples that contain students’ names and their final grades in PYTHON 101. Using list comprehension, create a new list passed that contains the names of students who passed the class (had a final grade of 70 or greater).
+students = [('Tommy', 95), ('Linda', 63), ('Carl', 70), ('Bob', 100), ('Raymond', 50), ('Sue', 75)]
+passed=[value[0] for value in students if value[1]>=70]
+print(passed)
+
+
 # Write code using zip and filter so that these lists (l1 and l2) are combined into one big list and assigned to the variable opposites if they are both longer than 3 characters each.
 l1 = ['left', 'up', 'front']
 l2 = ['right', 'down', 'back']
