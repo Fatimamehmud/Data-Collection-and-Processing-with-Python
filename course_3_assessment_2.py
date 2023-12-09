@@ -26,3 +26,25 @@ l1 = ['left', 'up', 'front']
 l2 = ['right', 'down', 'back']
 opposites=[value for value in filter(lambda x:(len(x[0]) > 3),zip(l1,l2) )]
 print(opposites)
+
+
+# Below, we have provided a species list and a population list. Use zip to combine these lists into one list of tuples called pop_info. From this list, create a new list called endangered that contains the names of species whose populations are below 2500.
+
+species = ['golden retriever', 'white tailed deer', 'black rhino', 'brown squirrel', 'field mouse', 'orangutan', 'sumatran elephant', 'rainbow trout', 'black bear', 'blue whale', 'water moccasin', 'giant panda', 'green turtle', 'blue jay', 'japanese beetle']
+
+population = [10000, 90000, 1000, 2000000, 500000, 500, 1200, 8000, 12000, 2300, 7500, 100, 1800, 9500, 125000]
+pop_info= list(tuple(zip(species,population)))
+endangered=[]
+for i in pop_info:
+    if i[1]<2500:
+        endangered.append(i[0])
+    else:
+        continue
+print(endangered)
+
+# other solution
+pop_info = list(zip(species, population))
+
+endangered = [species for species, pop in pop_info if pop < 2500]
+
+print(endangered)
